@@ -1,0 +1,34 @@
+Exercice 1.a
+
+cat ~/exercice1/2016_*.ann | wc -l
+
+cat ~/exercice1/2017_*.ann | wc -l
+
+cat ~/exercice1/2018_*.ann | wc -l
+
+echo "Annotations en 2016 :" > Exercices/comptes.txt
+echo "9443" >> Exercices/comptes.txt
+echo "Annotations en 2017 :" >> Exercices/comptes.txt
+echo "7183" >> Exercices/comptes.txt
+echo "Annotations en 2018 :" >> Exercices/comptes.txt
+echo "7565" >> Exercices/comptes.txt
+
+
+echo "Locations en 2016 :" > Exercices/locations.txt
+echo "3144" >> Exercices/locations.txt
+echo "Locations en 2017 :" >> Exercices/locations.txt
+echo "2466" >> Exercices/locations.txt
+echo "Locations en 2018 :" >> Exercices/locations.txt
+echo "3110" >> Exercices/locations.txt
+
+
+Exercice 2.a
+
+cat ~/exercice1/2016_*.ann | grep "Location" | cut -f 3 | sort | uniq -c | sort -n | tail -15 > Exercices/classement_2016.txt
+cat ~/exercice1/2017_*.ann | grep "Location" | cut -f 3 | sort | uniq -c | sort -n | tail -15 > Exercices/classement_2017.txt
+cat ~/exercice1/2018_*.ann | grep "Location" | cut -f 3 | sort | uniq -c | sort -n | tail -15 > Exercices/classement_2018.txt
+
+
+Exercice 2.b
+
+cat ~/exercice1/*_12_*.ann | grep "Location" | cut -f 3 | sort | uniq -c | sort -n | tail -15 > Exercices/classement_12.txt
